@@ -15,7 +15,7 @@
       </div>
       <div class="row space-between">
         <my-button text="Open dialog" appreance="secondary" id="dialogOpener"></my-button>
-        <my-modal-dialog>
+        <my-modal-dialog buttons='[{"text": "Confirm"}, {"text": "Cancel"}]' header="Hello from MyModalDialog">
           <p>This is dialog content</p>
         </my-modal-dialog>
       </div>
@@ -42,6 +42,10 @@
     modalBtn.addEventListener('click', () => {
       modal.visible = true;
     });
+
+    modal.addEventListener('myCoolEvent', () => {
+      console.log('myCoolEvent fired');
+    })
 
   </script>
 </html>

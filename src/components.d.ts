@@ -25,7 +25,9 @@ export namespace Components {
         "middle": string;
     }
     interface MyModalDialog {
+        "buttons": string;
         "closeIcon": string;
+        "header": string;
         "visible": boolean;
     }
 }
@@ -74,7 +76,10 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface MyModalDialog {
+        "buttons"?: string;
         "closeIcon"?: string;
+        "header"?: string;
+        "onMyCoolEvent"?: (event: CustomEvent<any>) => void;
         "visible"?: boolean;
     }
     interface IntrinsicElements {
